@@ -1,36 +1,13 @@
 # spec-gen
 
-FIXME: description
+1. Gather values by calling functions
 
-## Installation
+2. Generate specs using values
 
-Download from http://example.com/FIXME.
+3. Combine 1. and 2. and you get automatic generation of specs for your functions, just by running your functions!
 
-## Usage
+## Try it out!
 
-FIXME: explanation
+Clone this library, connect to a repl in your favourite way. Or just run `lein repl`.
 
-    $ java -jar spec-gen-0.1.0-standalone.jar [args]
-
-## Options
-
-FIXME: listing of options this app accepts.
-
-## Examples
-
-...
-
-### Bugs
-
-...
-
-### Any Other Sections
-### That You Think
-### Might be Useful
-
-## License
-
-Copyright © 2019 FIXME
-
-Distributed under the Eclipse Public License either version 1.0 or (at
-your option) any later version.
+Open `src/spec_gen/core.clj` and follow along the examples at the bottom (in the two comments blocks).
