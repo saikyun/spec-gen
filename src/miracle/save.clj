@@ -49,15 +49,16 @@
 
 (defn ld
   "Loads the local bindings that have been saved using `save` with `id` as parameter."
-  [id]
-  (let [locals (first (get @saves id))]
-    (when locals
-      (println "Defining:")
-      (inspect-map locals))
-    (doseq [[sym val] locals]
-      (try
-        (eval `(def ~(symbol sym) '~val))
-        (catch Exception e (prn sym val) (throw e))))))
+  ([id] (ld id 0))
+  ([id pos]
+   (let [locals (nth (get @saves id) pos)]
+     (when locals
+       (println "Defining:")
+       (inspect-map locals))
+     (doseq [[sym val] locals]
+       (try
+         (eval `(def ~(symbol sym) '~val))
+         (catch Exception e (prn sym val) (throw e)))))))
 
 (defn print-saves
   [id]
